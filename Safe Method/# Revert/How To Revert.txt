@@ -1,0 +1,8 @@
+To revert all changes and install ALL pre-installed apps back:
+
+Right click on the "POWERSHELL" shortcut in the revert folder and click RUN AS ADMINISTRATOR
+then copy and paste this command there WITHOUT THE QUOTES
+
+"Get-AppXPackage -allusers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register "$($_.InstallLocation)\AppXManifest.xml"}"
+
+then click enter and wait till it's finished.
